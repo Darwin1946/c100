@@ -9,37 +9,36 @@
 // 从键盘输入当月利润I，求应发放奖金总数？
 
 // 程序分析：请利用数轴来分界，定位。注意定义时需把奖金定义成双精度浮点(double)型。
-#include<stdio.h>
+#include <stdio.h>
 int main(void)
 {
     double bonus;
     double profit;
     printf("input profit:\n");
     scanf("%lf", &profit);
-    if (profit<100000)
+    if (profit < 100000)
     {
-        bonus = profit*0.1;
+        bonus = profit * 0.1;
     }
-    else if (100000<=profit<200000)
+    else if (100000 <= profit < 200000)
     {
-        bonus = 10000+(profit-100000)*0.075;
-    } 
-    else if (200000<=profit<400000)
-    {
-        bonus = 10000+7500+(profit-200000)*0.05;
+        bonus = 10000 + (profit - 100000) * 0.075;
     }
-    else if (400000<=profit<600000)
+    else if (200000 <= profit < 400000)
     {
-        bonus = 10000+7500+10000+(profit-400000)*0.03;
+        bonus = 10000 + 7500 + (profit - 200000) * 0.05;
     }
-    else if (600000<=profit<1000000)
+    else if (400000 <= profit < 600000)
     {
-        bonus = 10000+7500+10000+6000+(profit-600000)*0.015;
+        bonus = 10000 + 7500 + 10000 + (profit - 400000) * 0.03;
     }
-    else if (1000000<=profit)
+    else if (600000 <= profit < 1000000)
     {
-        bonus = 10000+7500+10000+6000+6000+(profit-1000000)*0.01;
+        bonus = 10000 + 7500 + 10000 + 6000 + (profit - 600000) * 0.015;
     }
-    printf("bonus:%f\n",bonus);
-    
+    else if (1000000 <= profit)
+    {
+        bonus = 10000 + 7500 + 10000 + 6000 + 6000 + (profit - 1000000) * 0.01;
+    }
+    printf("bonus:%f\n", bonus);
 }
