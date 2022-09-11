@@ -1,6 +1,10 @@
-//  Created by www.runoob.com on 15/11/9.
-//  Copyright © 2015年 菜鸟教程. All rights reserved.
-//
+// 题目：取一个整数 a 从右端开始的 4～7 位。
+
+// (1)先使 a 右移 4 位。
+
+// (2)设置一个低 4 位全为 1，其余全为 0 的数，可用~(~0<<4)
+
+// (3)将上面二者进行 & 运算。
  
 #include <stdio.h>
 int main()
